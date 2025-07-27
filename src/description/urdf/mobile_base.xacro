@@ -10,7 +10,7 @@
 
     <xacro:property name="base_ground" value="0.055" />
 
-    <xacro:property name="wheel_radius" value="0.034" />
+    <xacro:property name="wheel_radius" value="0.038" />
     <xacro:property name="wheel_length" value="0.025" />
     <xacro:property name="wheel_support_length" value="${base_ground - wheel_radius}" />
 
