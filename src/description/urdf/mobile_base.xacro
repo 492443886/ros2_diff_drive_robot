@@ -102,16 +102,16 @@
     <joint name="base_right_wheel_joint" type="continuous">
         <parent link="base_link" />
         <child link="right_wheel_link" />
-        <!-- 0.001 is margin in reall world -->
-        <origin xyz="0 ${-(base_width + wheel_length + 0.001) / 2.0} -${wheel_support_length }" rpy="0 0 0" />
+        <!-- 0.01 is margin in real world -->
+        <origin xyz="0 ${-(base_width + wheel_length + 0.01) / 2.0} -${wheel_support_length }" rpy="0 0 0" />
         <axis xyz="0 1 0" />
     </joint>
 
     <joint name="base_left_wheel_joint" type="continuous">
         <parent link="base_link" />
         <child link="left_wheel_link" />
-        <!-- 0.001 is margin in reall world -->
-        <origin xyz="0 ${(base_width + wheel_length + 0.001) / 2.0} -${wheel_support_length}" rpy="0 0 0" />
+        <!-- 0.01 is margin in real world -->
+        <origin xyz="0 ${(base_width + wheel_length + 0.01) / 2.0} -${wheel_support_length}" rpy="0 0 0" />
         <axis xyz="0 1 0" />
     </joint>
 
