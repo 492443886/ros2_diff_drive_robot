@@ -32,12 +32,12 @@ class CameraPublisherNode(Node):
     def timer_callbackFunction(self):
 
         success, frame = self.camera.read()
-        # frame = cv2.resize(frame, (820, 640), interpolation=cv2.INTER_CUBIC)
+        frame = cv2.resize(frame, (820, 640), interpolation=cv2.INTER_CUBIC)
 
         if success:
 
-            # ROS2ImageMessage = self.bridgeObject.cv2_to_imgmsg(frame)
-            # self.publisher.publish(ROS2ImageMessage)
+            ROS2ImageMessage = self.bridgeObject.cv2_to_imgmsg(frame)
+            self.publisher.publish(ROS2ImageMessage)
             self.get_logger().info('Publishing image number %d' % self.i )
 
         self.i += 1
